@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Employee PAyrollForm</title>
+        <link rel="stylesheet" href="EmployeePayrollstylesheet">
+        <script defer src="Empyeeplayroll.js"></script>
+        <script defer src="EmployeePayrollData.js"></script>
+        
+    </head>
+    <body>
+        <header class="header-content header">
+            <div class="logo-content">
+                <img src="banner-9-righ.jpg" alt ="" width="8%">
+            
+            <div>
+            <span class="emp-text">EMPLOYEE</span><br>
+            <span class="emp-text emp-payroll">PAYROLL</span>
+        </div>
+    </div>
+        </header>
+
+
+    <div class="form-content">
+
+        <form class="form" action="#" onsubmit="save(); return false">
+            <div class="form head">
+            Employee Payroll form</div>
+        
+    
+    <div class="row-content">
+        <label class="label text">Name</label>
+        <input class="input" type="text" id="name" name="name" placeholder="your name..." required>
+
+        </div>
+        
+    </div>
+
+    <div class="row-content">
+        <label class="label text" for="profile">profile image</label>
+
+    <div class="profile-radio-content">
+        <label>
+            <input type="radio" id="profile1" name="profile" value="image1.jpg" required>
+            <img class="profile" id="image1" src="image1.jpg" width="8%">
+        </label>
+        <label>
+            <input type="radio" id="profile2" name="profile" value="image2.jpg" required>
+            <img class="profile" id="image2" src="image2.jpg" width="8%">
+        </label>
+        <label>
+            <input type="radio" id="profile3" name="profile" value="iamge3.jpg" required>
+            <img class="profile" id="iamge3" src="iamge3.jpg" width="8%">
+        </label>
+        <label>
+            <input type="radio" id="profile4" name="profile" value="image4.jpg" required>
+            <img class="profile" id="image4" src="image4.jpg" width="8%">
+        </label>
+    </div>
+    </div>
+    <div class="row-content">
+        <label class="label text" for="gender">Gender</label>
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label class="text" for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label class="text" for="female">Female</label>
+        </div>
+    </div>
+
+    <div class="row-content">
+        <label class="label text" for="department">Department</label>
+        <div>
+            <input type="checkbox" id="hr" name="hr" value="hr">
+            <label class="text" for="hr">HR</label>
+
+            <input type="checkbox" id="sales" name="sales" value="sales">
+            <label class="text" for="sales">Sales</label>
+            <input type="checkbox" id="finance" name="finance" value="finance">
+            <label class="text" for="finance">Finance</label>
+            <input type="checkbox" id="engineer" name="engineer" value="engineer">
+            <label class="text" for="engineer">Engineer</label>
+            <input type="checkbox" id="others" name="others" value="others">
+            <label class="text" for="hr">others</label>
+        </div>
+    </div>
+    <div class="row-content">
+        <label class="label text" for="salary">Salary</label>
+        <input class="input" type="range" name="salary" id="salary" min="30000"max="50000" step="100" value="40000">
+        <output class="salary-output text" for="salary">40000</output>
+    </div>
+
+    //UC5
+
+    <div class="row-content">
+        <label class="label text" for="start-date">StartDate</label>
+        <div>
+            <select id="day" name="day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+
+            </select>
+            <select id="month" name="month">
+                <option value="Jan">january</option>
+                <option value="Feb">Feburary</option>
+                <option value="Mar">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="jun">Jun</option>
+                <option value="jul">July</option>
+                <option value="august">Augest</option>
+                <option value="september">Sepember</option>
+                <option value="oct">October</option>
+                <option value="nov">november</option>
+                <option value="dec">december</option>
+
+            </select>
+            <select id="year" name="year">
+                <option vlaue="2020">2020</option>
+                <option vlaue="2021">2021</option>
+                <option value="2022">2022</option>
+                <option vlaue="2023">2023</option>
+            </select>
+
+        </div>
+
+    </div>
+    <div class="row-content">
+        <label class="label text" for="notes">notes</label>
+        <textarea id="notes" class="input" name="notes"placeholder="" style="height: 100px;"></textarea>
+    </div>
+    <div class="button-parent">
+        <a href="Employeepatroll.html" class="reset button button vcancel button">Cancel</a>
+    </div>
+       
+
+
+</form>
+</div> 
+
+
+    
+        </body>
+    
+</html>
