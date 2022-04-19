@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Baseic input types</title>
+        <link rel="stylesheet" href="inputformCSS.css">
+        <script src="inputData.js"></script>
+
+
+    </head>
+    <body>
+        <form>
+            <header class="headerContainer"><h1>HTML 5 Form Input Fi</h1></header>
+            <div>
+                <label for="text">text input for name :</label>
+                <input type="text" id="text" name="textinput">
+                <error-output class="text-error" for="text"></error-output>
+
+                
+            </div>
+
+            <div>
+                <label for="pwd">password input type :</label>
+                <input type="password" id="pwd" name="pwd">
+                <error-output class="pwd-error" for="pwd"></error-output>
+
+                
+            </div>
+
+            <div>
+                <label for="email">email input type :</label>
+                <input type="email" id="email" name="email">
+                <error-output class="email-error" for="email"></error-output>
+
+                
+            </div>
+
+            <div>
+                <label for="url">url input type :</label>
+                <input type="url" id="url" name="url">
+
+                
+            </div>
+
+            <div>
+                <label for="number">number input type :</label>
+                <input type="number" id="number" name="number">
+               
+
+                
+            </div>
+            <div>
+                <label for="tel">tel input type :</label>
+                <input type="tel" id="tel" name="tel">
+                <error-output class="tel-error" for="tel"></error-output>
+
+                
+            </div>
+            
+            <div>
+                <label for="serach">search input type :</label>
+                <input type="search" id="search" name="search">
+
+                
+            </div>
+            <div class="native datetime picker">
+                <label for="party">choose date and time :</label>
+                <input type="date time local" id="party" name="bday">
+
+                
+            </div>
+            <div>
+                <label for="salary">choose your salary :</label>
+                <input type="range" id="salary" id="salary" min="10000"
+                max="50000" step="100" value="20000">
+                <output class="salary-output" for="salary">30000</output>
+
+                
+            </div>
+            <div>
+                <button>submit</button>
+            </div>
+
+        </form>
+        <script>
+            const text=document.querySelector('#text');
+            const textError=document.querySelector('.text-error');
+            text.addEventListener('input',function(){
+                let nameRegx=RegExp('[A-Z]{1}[a-z]{2,}');
+                if(nameRegx.test(text.value))
+                textError.textContent="";
+                else
+                textError.textContent="Name is incorrect";
+            })
+        </script>
+        <script>
+            const text1=document.querySelector('#email');
+            const textError1=document.querySelector('.email-error');
+            text1.addEventListener('input',function(){
+                let nameRegx=RegExp('^[a-zA-Z0-9]{3,20}@gmail.com$');
+                if(nameRegx.test(text1.value))
+                textError1.textContent="";
+                else
+                textError1.textContent="email is incorrect";
+            })
+
+        </script>
+        <script>
+            const text2=document.querySelector('#tel');
+            const textError2=document.querySelector('.tel-error');
+            text2.addEventListener('input',function(){
+                let nameRegx=RegExp('^[1-9]{2}[0-9]{10}$');
+                if(nameRegx.test(text2.value))
+                textError2.textContent="";
+                else
+                textError2.textContent="tel is incorrect";
+            })
+
+        </script>
+        <script>
+            const text3=document.querySelector('#pwd');
+            const textError3=document.querySelector('.pwd-error');
+            text3.addEventListener('input',function(){
+                let nameRegx=RegExp('^[A-Za-z0-9]{8}$');
+                if(nameRegx.test(text2.value))
+                textError3.textContent="";
+                else
+                textError3.textContent="pwd is incorrect";
+            })
+
+        </script>
+    </body>
+</html>
